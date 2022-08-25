@@ -70,7 +70,7 @@ export interface Author {
 export interface WorkSummary {
   id: number;
   title: string;
-  category: WorkCategory | null;
+  category: WorkCategory[] | null;
   // Date in ISO format. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
   // Note that AO3 doesn't publish the actual time of publish, just the date.
   publishedAt: string;
