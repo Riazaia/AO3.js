@@ -56,10 +56,12 @@ export enum WorkWarningStatus {
 }
 
 export enum WorkWarnings {
-  GRAPHIC_VIOLENCE = "Graphic depictions of violence",
-  MAJOR_CHARACTER_DEATH = "Major character death",
-  NONCON = "Rape/non-con",
+  GRAPHIC_VIOLENCE = "Graphic Depictions Of Violence",
+  MAJOR_CHARACTER_DEATH = "Major Character Death",
+  NONE_APPLY = "No Archive Warnings Apply",
+  NONCON = "Rape/Non-Con",
   UNDERAGE = "Underage",
+  CNTW = "Creator Chose Not To Use Archive Warnings",
 }
 
 export interface Author {
