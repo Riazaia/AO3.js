@@ -56,12 +56,10 @@ export enum WorkWarningStatus {
 }
 
 export enum WorkWarnings {
-  GRAPHIC_VIOLENCE = "Graphic Depictions Of Violence",
-  MAJOR_CHARACTER_DEATH = "Major Character Death",
-  NONE_APPLY = "No Archive Warnings Apply",
-  NONCON = "Rape/Non-Con",
+  GRAPHIC_VIOLENCE = "Graphic depictions of violence",
+  MAJOR_CHARACTER_DEATH = "Major character death",
+  NONCON = "Rape/non-con",
   UNDERAGE = "Underage",
-  CNTW = "Creator Chose Not To Use Archive Warnings",
 }
 
 export interface Author {
@@ -70,9 +68,9 @@ export interface Author {
 }
 
 export interface WorkSummary {
-  id: string;
+  id: number;
   title: string;
-  category: WorkCategory[] | null;
+  category: WorkCategory | null;
   // Date in ISO format. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
   // Note that AO3 doesn't publish the actual time of publish, just the date.
   publishedAt: string;
@@ -99,9 +97,9 @@ export interface WorkSummary {
   };
   complete: boolean;
   stats: {
-    bookmarks: number | null;
-    comments: number | null;
-    kudos: number | null;
+    bookmarks: number;
+    comments: number;
+    kudos: number;
     hits: number;
   };
 }
