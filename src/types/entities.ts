@@ -70,7 +70,7 @@ export interface Author {
 }
 
 export interface WorkSummary {
-  id: number;
+  id: string;
   title: string;
   category: WorkCategory[] | null;
   // Date in ISO format. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
@@ -99,9 +99,9 @@ export interface WorkSummary {
   };
   complete: boolean;
   stats: {
-    bookmarks: number;
-    comments: number;
-    kudos: number;
+    bookmarks: number | null;
+    comments: number | null;
+    kudos: number | null;
     hits: number;
   };
 }
