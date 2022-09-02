@@ -478,5 +478,19 @@ describe("Fetches work information", () => {
         kudos: null,
       });
     });
+
+    test("Fetch work series", async () => {
+      const work = await getWork({
+        workId: "41289660",
+      });
+      expect(work.series).toMatchObject(["hi"]);
+    });
+
+    test("Fetch series when there's none", async () => {
+      const work = await getWork({
+        workId: "41289660",
+      });
+      expect(work.series).toBe(null);
+    });
   });
 });

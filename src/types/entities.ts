@@ -80,9 +80,6 @@ export interface WorkSummary {
   // TODO: should this be in HTML?
   summary: string | null;
   rating: WorkRatings;
-  // Whether this work will display the "this work could have adult content" banner
-  // upon access.
-  adult: boolean;
   fandoms: string[];
   tags: {
     warnings: WorkWarnings[];
@@ -97,11 +94,19 @@ export interface WorkSummary {
     published: number;
     total: number | null;
   };
-  complete: boolean;
   stats: {
     bookmarks: number | null;
     comments: number | null;
     kudos: number | null;
     hits: number;
   };
+  series: Series[];
+}
+
+export interface Series {
+  name: string;
+  id: number;
+  part: number;
+  previousWorkId: number | null;
+  nextWorkId: number | null;
 }
