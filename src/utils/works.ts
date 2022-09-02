@@ -160,8 +160,9 @@ export const getWorkRelationships = ($workPage: WorkPage): string[] => {
 
 export const getWorkAdditionalTags = ($workPage: WorkPage): string[] => {
   const freeform: string[] = [];
-  $workPage("dd.freeform ul.commas li").each(function (i) {
-    freeform[i] = $workPage(this).text().trim();
+
+  $workPage("dd.freeform a.tag").each(function (i, element) {
+    freeform[i] = $workPage(element).text().trim();
   });
   return freeform;
 };
