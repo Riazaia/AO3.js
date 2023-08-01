@@ -1,14 +1,15 @@
 {
+  "extends": "@tsconfig/node-lts/tsconfig.json",
   "compilerOptions": {
-    "module": "ES2020",
-    "moduleResolution": "node",
-    "target": "es2019",
-    "declaration": true,
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "allowJs": false,
-    "types": ["node", "jest"]
+    "types": ["node", "@types/jest"],
+    "moduleResolution": "Node",
+    "module": "es2022",
+    "paths": {
+      "src/*": ["./src/*"],
+      "types/*": ["./types/*"]
+    },
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["**/tests/**/*"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules/"]
 }
