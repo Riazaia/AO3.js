@@ -111,6 +111,8 @@ export interface WorkSummary {
     kudos: number;
     hits: number;
   };
+  series: WorkSeries[];
+  collections: WorkCollection[];
   locked: false;
 }
 
@@ -125,4 +127,25 @@ export interface Chapter {
   title: string;
   publishedAt: string;
   url: string;
+}
+
+export interface WorkSeries {
+    id: string;
+    title: string;
+    url: string;
+    currentWork: {
+      id: string;
+      // i don't like putting the url in here, personally
+      url: string;
+      index: number;
+      prevWorkId: string | null;
+      nextWorkId: string | null;
+    }
+}
+
+export interface WorkCollection {
+// should this be called title or name??? pls vote
+    name: string;
+    id: string;
+    url: string;
 }
